@@ -1363,4 +1363,4 @@ function FooterCol({ title, links }: { title: string; links: [string, string][] 
 
 /* Suppress unused warning for helper we're keeping around */
 void Bird;
-void useAutoRotateTestimonials;
+
