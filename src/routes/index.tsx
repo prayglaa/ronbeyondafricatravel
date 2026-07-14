@@ -965,7 +965,7 @@ function Booking() {
         }}
         aria-hidden
       />
-      <div className="mx-auto max-w-6xl px-6 sm:px-8">
+      <div className="relative z-10 mx-auto max-w-6xl px-6 sm:px-8">
         <div ref={ref} className="reveal rounded-[2rem] bg-card p-8 shadow-luxe sm:p-12 md:p-14">
           <div className="grid gap-10 md:grid-cols-[1.1fr,1.5fr] md:items-start">
             <div>
