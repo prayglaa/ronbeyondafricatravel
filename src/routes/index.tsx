@@ -314,7 +314,7 @@ function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
       {/* Parallax bg */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 z-0">
         <img
           src={heroSafari}
           alt="Tanzania safari at sunset with elephants and acacia trees"
