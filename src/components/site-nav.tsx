@@ -53,10 +53,10 @@ export function SiteNav() {
           </span>
           <span className="flex flex-col leading-none">
             <span className="font-display text-lg font-semibold tracking-tight text-white">
-              Serengeti
+              Ronbeyond
             </span>
-            <span className="text-[10px] uppercase tracking-[0.28em] text-white/70">
-              Journeys
+            <span className="text-[10px] uppercase tracking-[0.16em] text-white/70">
+              Africa Travel
             </span>
           </span>
         </a>

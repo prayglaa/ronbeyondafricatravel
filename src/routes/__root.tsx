@@ -72,9 +72,9 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-const SITE_TITLE = "Serengeti Journeys — Luxury Safaris & Tanzania Expeditions";
+const SITE_TITLE = "Ronbeyond Africa Travel — Luxury Safaris & Tanzania Expeditions";
 const SITE_DESCRIPTION =
-  "Craft your dream Tanzania safari with Serengeti Journeys. Private guides, luxury lodges, Kilimanjaro treks and Zanzibar escapes tailored to you.";
+  "Craft your dream Tanzania safari with Ronbeyond Africa Travel. Private guides, luxury lodges, Kilimanjaro treks and Zanzibar escapes tailored to you."
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
@@ -83,9 +83,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: SITE_TITLE },
       { name: "description", content: SITE_DESCRIPTION },
-      { name: "author", content: "Serengeti Journeys" },
+      { name: "author", content: "Ronbeyond Africa Travel" },
       { name: "theme-color", content: "#1B5E20" },
-      { property: "og:site_name", content: "Serengeti Journeys" },
+      { property: "og:site_name", content: "Ronbeyond Africa Travel" },
       { property: "og:title", content: SITE_TITLE },
       { property: "og:description", content: SITE_DESCRIPTION },
       { property: "og:type", content: "website" },
@@ -116,7 +116,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "TravelAgency",
-          name: "Serengeti Journeys",
+          name: "Ronbeyond Africa Travel",
           description: SITE_DESCRIPTION,
           areaServed: "Tanzania",
           priceRange: "$$$",

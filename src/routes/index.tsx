@@ -220,7 +220,7 @@ const TESTIMONIALS = [
   {
     name: "Michael Anderson",
     country: "New York, USA",
-    text: "I've travelled to 60 countries and this Tanzania trip topped every list. Balloon over the migration at dawn, followed by a private villa in Zanzibar. Serengeti Journeys thought of things I didn't know to ask for.",
+    text: "I've travelled to 60 countries and this Tanzania trip topped every list. Balloon over the migration at dawn, followed by a private villa in Zanzibar. Ronbeyond Africa Travel thought of things I didn't know to ask for.",
     initials: "MA",
     color: "bg-gradient-safari",
   },
@@ -478,7 +478,7 @@ function WhyUs() {
     <section id="why" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 sm:px-8">
         <SectionHeading
-          eyebrow="Why Serengeti Journeys"
+          eyebrow="Why Ronbeyond Africa Travel"
           title={
             <>
               The difference is in the <span className="italic text-gradient-sunset">details</span>
@@ -1237,7 +1237,7 @@ function Contact() {
 
         <div className="mt-8 overflow-hidden rounded-3xl border border-border shadow-soft">
           <iframe
-            title="Serengeti Journeys location"
+            title="Ronbeyond Africa Travel location"
             src="https://www.google.com/maps?q=Arusha+Tanzania&output=embed"
             className="h-[360px] w-full"
             loading="lazy"
@@ -1266,8 +1266,8 @@ function Footer() {
                 </svg>
               </span>
               <div>
-                <div className="font-display text-lg font-semibold text-white">Serengeti Journeys</div>
-                <div className="text-[10px] uppercase tracking-[0.28em] text-white/60">Luxury Tanzania Travel</div>
+                <div className="font-display text-lg font-semibold text-white">Ronbeyond Africa Travel</div>
+                <div className="text-[10px] uppercase tracking-[0.16em] text-white/60">Luxury Tanzania Travel</div>
               </div>
             </div>
             <p className="mt-5 text-sm leading-relaxed text-white/60">
@@ -1336,7 +1336,7 @@ function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row">
-          <div>© {new Date().getFullYear()} Serengeti Journeys. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} Ronbeyond Africa Travel. All rights reserved.</div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white">Privacy</a>
             <a href="#" className="hover:text-white">Terms</a>
