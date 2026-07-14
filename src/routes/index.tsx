@@ -860,14 +860,7 @@ function Testimonials() {
   );
 }
 
-function useAutoRotateTestimonials(setIndex: (n: number) => void, len: number) {
-  useEffect(() => {
-    const t = setInterval(() => {
-      setIndex((prev: any) => ((prev as number) + 1) % len);
-    }, 6500);
-    return () => clearInterval(t);
-  }, [setIndex, len]);
-}
+
 
 function AboutTanzania() {
   const imgRef = useReveal<HTMLDivElement>();
