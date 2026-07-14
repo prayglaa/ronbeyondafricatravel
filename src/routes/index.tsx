@@ -56,8 +56,8 @@ import { Toaster } from "@/components/ui/sonner";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { property: "og:image", content: "/og-preview.jpg" },
-      { name: "twitter:image", content: "/og-preview.jpg" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/a5b29081-ee67-41b8-a03f-bb22eb89c369" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/a5b29081-ee67-41b8-a03f-bb22eb89c369" },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],

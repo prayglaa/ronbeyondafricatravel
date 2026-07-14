@@ -92,10 +92,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: SITE_TITLE },
       { name: "twitter:description", content: SITE_DESCRIPTION },
+      { title: "Get connected, Change life" },
+      { property: "og:title", content: "Get connected, Change life" },
+      { name: "twitter:title", content: "Get connected, Change life" },
+      { name: "description", content: "Travel | Conservation | Photograph" },
+      { property: "og:description", content: "Travel | Conservation | Photograph" },
+      { name: "twitter:description", content: "Travel | Conservation | Photograph" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/a5b29081-ee67-41b8-a03f-bb22eb89c369" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/a5b29081-ee67-41b8-a03f-bb22eb89c369" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
