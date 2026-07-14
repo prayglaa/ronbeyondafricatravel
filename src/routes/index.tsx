@@ -326,7 +326,7 @@ function Hero() {
         <div className="absolute inset-0 bg-hero-overlay" />
       </div>
 
-      <div className="mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 pb-24 pt-40 sm:px-8">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 pb-24 pt-40 sm:px-8">
         <div className="max-w-3xl animate-fade-up">
           <span className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-medium uppercase tracking-[0.28em] text-white">
             <span className="h-1.5 w-1.5 rounded-full bg-gold" />
@@ -956,7 +956,7 @@ function Booking() {
   const ref = useReveal<HTMLDivElement>();
   return (
     <section id="booking" className="relative overflow-hidden py-24 sm:py-32">
-      <div className="absolute inset-0 -z-10 bg-gradient-safari" />
+      <div className="absolute inset-0 z-0 bg-gradient-safari" />
       <div
         className="pointer-events-none absolute inset-0 opacity-40"
         style={{
