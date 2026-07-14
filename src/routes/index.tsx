@@ -798,6 +798,10 @@ function Gallery({ onOpen }: { onOpen: (i: number) => void }) {
 
 function Testimonials() {
   const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setIndex((i) => (i + 1) % TESTIMONIALS.length), 6500);
+    return () => clearInterval(t);
+  }, []);
   const active = TESTIMONIALS[index];
 
   return (
