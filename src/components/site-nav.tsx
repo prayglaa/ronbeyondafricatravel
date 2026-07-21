@@ -47,7 +47,7 @@ export function SiteNav() {
         )}
       >
         <a href="#home" className="group flex items-center gap-2.5">
-          <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-full bg-cream shadow-gold ring-1 ring-white/20">
+          <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-full bg-background shadow-gold ring-1 ring-white/20">
             <img src={logoAsset.url} alt="Ronbeyond Africa Travel logo" className="h-full w-full object-cover" />
           </span>
           <span className="flex flex-col leading-none">
