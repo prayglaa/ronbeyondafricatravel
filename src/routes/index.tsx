@@ -45,6 +45,7 @@ import galZebras from "@/assets/gallery-zebras.jpg";
 import galLodge from "@/assets/gallery-lodge.jpg";
 import galBalloon from "@/assets/gallery-balloon.jpg";
 import aboutTanzania from "@/assets/about-tanzania.jpg";
+import logoAsset from "@/assets/ronbeyond-logo.jpeg.asset.json";
 
 import { SiteNav } from "@/components/site-nav";
 import { Lightbox, type LightboxImage } from "@/components/lightbox";
