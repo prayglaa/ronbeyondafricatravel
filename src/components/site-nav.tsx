@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logoAsset from "@/assets/ronbeyond-logo.jpeg.asset.json";
 
 const NAV = [
   { label: "Home", href: "#home" },
