@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logoAsset from "@/assets/ronbeyond-logo.jpeg.asset.json";
 
 const NAV = [
   { label: "Home", href: "#home" },
@@ -46,10 +47,8 @@ export function SiteNav() {
         )}
       >
         <a href="#home" className="group flex items-center gap-2.5">
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-gradient-gold shadow-gold">
-            <svg viewBox="0 0 24 24" className="h-5 w-5 text-charcoal" fill="currentColor" aria-hidden>
-              <path d="M12 2c-1.5 3-4 4.5-7 5 1.5 3 1.5 6 0 9 3 .5 5.5 2 7 5 1.5-3 4-4.5 7-5-1.5-3-1.5-6 0-9-3-.5-5.5-2-7-5Z" />
-            </svg>
+          <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-full bg-background shadow-gold ring-1 ring-white/20">
+            <img src={logoAsset.url} alt="Ronbeyond Africa Travel logo" className="h-full w-full object-cover" />
           </span>
           <span className="flex flex-col leading-none">
             <span className="font-display text-lg font-semibold tracking-tight text-white">
