@@ -1172,22 +1172,22 @@ const CONTACT_CARDS = [
   {
     icon: Phone,
     title: "Phone",
-    lines: ["+255 754 123 456", "Mon – Sun · 24/7"],
-    href: "tel:+255754123456",
+    lines: ["+255 749 458 052", "Mon – Sun · 24/7"],
+    href: "tel:+255749458052",
     cta: "Call us",
   },
   {
     icon: MessageCircle,
     title: "WhatsApp",
-    lines: ["+255 754 123 456", "Instant reply guaranteed"],
-    href: "https://wa.me/255754123456",
+    lines: ["+255 749 458 052", "Instant reply guaranteed"],
+    href: "https://wa.me/255749458052",
     cta: "Chat now",
   },
   {
     icon: Mail,
     title: "Email",
-    lines: ["hello@serengetijourneys.co", "24h response window"],
-    href: "mailto:hello@serengetijourneys.co",
+    lines: ["ronbeyond@gmail.com", "24h response window"],
+    href: "mailto:ronbeyond@gmail.com",
     cta: "Send email",
   },
 ];
