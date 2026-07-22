@@ -1011,10 +1011,41 @@ function Booking() {
 }
 
 function BookingForm() {
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast.success("Thank you! Our team will be in touch within 24 hours.");
-    (e.target as HTMLFormElement).reset();
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+
+    const payload = {
+      name: String(fd.get("name") ?? "").trim(),
+      email: String(fd.get("email") ?? "").trim(),
+      phone: String(fd.get("phone") ?? "").trim(),
+      travel_date: String(fd.get("date") ?? ""),
+      destination: String(fd.get("destination") ?? ""),
+      package: String(fd.get("package") ?? ""),
+      travelers: Number(fd.get("travelers") ?? 1),
+      message: String(fd.get("message") ?? "").trim() || null,
+    };
+
+    if (!payload.name || !payload.email || !payload.phone || !payload.travel_date) {
+      toast.error("Please fill in all required fields.");
+      return;
+    }
+
+    setSubmitting(true);
+    const { error } = await supabase.from("bookings").insert(payload);
+    setSubmitting(false);
+
+    if (error) {
+      console.error(error);
+      toast.error("Something went wrong. Please try again or contact us directly.");
+      return;
+    }
+
+    toast.success("Thank you! Your booking has been received. Our team will be in touch within 24 hours.");
+    form.reset();
   };
 
   return (
@@ -1049,9 +1080,10 @@ function BookingForm() {
       </div>
       <button
         type="submit"
-        className="group sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-safari px-8 py-4 text-sm font-semibold text-white shadow-emerald transition hover:-translate-y-0.5 hover:brightness-110"
+        disabled={submitting}
+        className="group sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-safari px-8 py-4 text-sm font-semibold text-white shadow-emerald transition hover:-translate-y-0.5 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60"
       >
-        Book Your Safari
+        {submitting ? "Sending…" : "Book Your Safari"}
         <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
       </button>
     </form>
