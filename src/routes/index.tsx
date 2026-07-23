@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type FormEvent } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { notifyBookingWhatsApp } from "@/lib/notify-booking.functions";
 import {
   Compass,
   Sparkles,
@@ -1036,7 +1037,11 @@ function BookingForm() {
     }
 
     setSubmitting(true);
-    const { error } = await supabase.from("bookings").insert(payload);
+    const { data: inserted, error } = await supabase
+      .from("bookings")
+      .insert(payload)
+      .select("id")
+      .single();
     setSubmitting(false);
 
     if (error) {
@@ -1047,6 +1052,13 @@ function BookingForm() {
 
     toast.success("Thank you! Your booking has been received. Our team will be in touch within 24 hours.");
     form.reset();
+
+    // Fire-and-forget WhatsApp notification to the owner.
+    if (inserted?.id) {
+      notifyBookingWhatsApp({ data: { bookingId: inserted.id } }).catch((err) =>
+        console.error("WhatsApp notification failed", err),
+      );
+    }
   };
 
   return (
