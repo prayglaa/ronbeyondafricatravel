@@ -48,6 +48,16 @@ import galLodge from "@/assets/gallery-lodge.jpg";
 import galBalloon from "@/assets/gallery-balloon.jpg";
 import aboutTanzania from "@/assets/about-tanzania.jpg";
 import logoAsset from "@/assets/ronbeyond-logo.jpeg.asset.json";
+import userZebra from "@/assets/user-zebra.jpeg.asset.json";
+import userHippo from "@/assets/user-hippo.jpeg.asset.json";
+import userLionPortrait from "@/assets/user-lion-portrait.jpeg.asset.json";
+import userTourists from "@/assets/user-tourists.jpeg.asset.json";
+import userGuide1 from "@/assets/user-guide-1.jpeg.asset.json";
+import userGuide2 from "@/assets/user-guide-2.jpeg.asset.json";
+import userWaterbuck from "@/assets/user-waterbuck.jpeg.asset.json";
+import userBird from "@/assets/user-bird.jpeg.asset.json";
+import userOstriches from "@/assets/user-ostriches.jpeg.asset.json";
+import userLionsRoar from "@/assets/user-lions-roar.jpeg.asset.json";
 
 import { SiteNav } from "@/components/site-nav";
 import { Lightbox, type LightboxImage } from "@/components/lightbox";
@@ -201,15 +211,16 @@ const EXPERIENCES = [
 ];
 
 const GALLERY: (LightboxImage & { span: string })[] = [
-  { src: galLion, alt: "Male lion at sunset", span: "row-span-2" },
-  { src: galElephants, alt: "Elephant family walking", span: "" },
-  { src: destKilimanjaro, alt: "Mount Kilimanjaro", span: "" },
-  { src: galGiraffe, alt: "Giraffes at dusk", span: "row-span-2" },
-  { src: galZebras, alt: "Zebras crossing river", span: "" },
-  { src: destZanzibar, alt: "Zanzibar beach paradise", span: "" },
-  { src: galBalloon, alt: "Hot air balloon over Serengeti", span: "row-span-2" },
-  { src: galLodge, alt: "Luxury safari lodge at sunset", span: "" },
-  { src: destSerengeti, alt: "Wildebeest herd on the plains", span: "" },
+  { src: userLionPortrait.url, alt: "Young male lion resting in the grass", span: "row-span-2" },
+  { src: userZebra.url, alt: "Zebra in golden sunset light", span: "" },
+  { src: userHippo.url, alt: "Hippo close-up in the water", span: "" },
+  { src: userLionsRoar.url, alt: "Two lions, one roaring", span: "row-span-2" },
+  { src: userWaterbuck.url, alt: "Waterbuck walking through green grass", span: "" },
+  { src: userOstriches.url, alt: "Ostriches crossing the savanna path", span: "" },
+  { src: userGuide1.url, alt: "Our guide in the Serengeti plains", span: "row-span-2" },
+  { src: userBird.url, alt: "Wide-eyed bird resting by the water", span: "" },
+  { src: userTourists.url, alt: "Travelers on a safari game drive", span: "" },
+  { src: userGuide2.url, alt: "Smiling safari guide on location", span: "" },
 ];
 
 const TESTIMONIALS = [
