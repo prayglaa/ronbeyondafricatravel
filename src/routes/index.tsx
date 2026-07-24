@@ -61,6 +61,10 @@ import userLionsRoar from "@/assets/user-lions-roar.jpeg.asset.json";
 
 import { SiteNav } from "@/components/site-nav";
 import { Lightbox, type LightboxImage } from "@/components/lightbox";
+import { VideoModal } from "@/components/video-modal";
+import video2Asset from "@/assets/video2.mov.asset.json";
+
+const SHOWREEL_VIDEOS = [{ src: video2Asset.url }];
 import { useReveal, useCountUp } from "@/hooks/use-reveal";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
