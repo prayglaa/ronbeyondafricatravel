@@ -347,14 +347,13 @@ function Hero() {
             Tailored Tanzania Expeditions
           </span>
           <h1 className="mt-6 font-display text-5xl font-semibold leading-[1.02] text-white sm:text-6xl md:text-7xl lg:text-[5.5rem]">
-            Discover the{" "}
-            <span className="italic text-gradient-gold">Magic</span>
-            <br /> of Tanzania
+            Get connected,
+            <br /> Change life
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
             Experience unforgettable safaris, the majestic Mount Kilimanjaro,
-            pristine Zanzibar beaches and authentic African adventures —
-            crafted one journey at a time.
+            pristine Zanzibar beaches and authentic African adventures,
+            crafted one journey at a time through Ronbeyond Africa Travel.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
@@ -1217,7 +1216,7 @@ const CONTACT_CARDS = [
   {
     icon: MapPinned,
     title: "Office",
-    lines: ["Boma Road, Arusha", "Tanzania, East Africa"],
+    lines: ["Goliondoi Road, Sekei Ward, Arusha City ", "Tanzania, East Africa"],
     href: "https://maps.google.com/?q=Arusha+Tanzania",
     cta: "Open in Maps",
   },
