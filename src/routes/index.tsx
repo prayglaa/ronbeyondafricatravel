@@ -61,6 +61,10 @@ import userLionsRoar from "@/assets/user-lions-roar.jpeg.asset.json";
 
 import { SiteNav } from "@/components/site-nav";
 import { Lightbox, type LightboxImage } from "@/components/lightbox";
+import { VideoModal } from "@/components/video-modal";
+import video2Asset from "@/assets/video2.mov.asset.json";
+
+const SHOWREEL_VIDEOS = [{ src: video2Asset.url }];
 import { useReveal, useCountUp } from "@/hooks/use-reveal";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
@@ -325,6 +329,7 @@ function LandingPage() {
 /* ---------- Sections ---------- */
 
 function Hero() {
+  const [videoOpen, setVideoOpen] = useState(false);
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
       {/* Parallax bg */}
@@ -365,7 +370,7 @@ function Hero() {
             </a>
             <button
               type="button"
-              onClick={() => toast("Video coming soon — reach out for our showreel.")}
+              onClick={() => setVideoOpen(true)}
               className="group inline-flex items-center gap-3 rounded-full glass px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
             >
               <span className="grid h-9 w-9 place-items-center rounded-full bg-white text-emerald-deep">
@@ -409,6 +414,11 @@ function Hero() {
           <ChevronDown className="h-5 w-5 animate-[scroll-hint_2s_ease-in-out_infinite]" />
         </span>
       </a>
+      <VideoModal
+        videos={SHOWREEL_VIDEOS}
+        open={videoOpen}
+        onClose={() => setVideoOpen(false)}
+      />
     </section>
   );
 }
