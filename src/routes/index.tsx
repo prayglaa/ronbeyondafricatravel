@@ -81,10 +81,10 @@ export const Route = createFileRoute("/")({
 /* ---------- Data ---------- */
 
 const HERO_STATS = [
-  { icon: "⭐", label: "Years Experience", value: "15+" },
-  { icon: "🌍", label: "Happy Travelers", value: "5,000+" },
+  { icon: "\n", label: "Years Experience", value: "3+" },
+  { icon: "🌍", label: "Happy Travelers", value: "100+" },
   { icon: "🦁", label: "Safari Tours", value: "50+" },
-  { icon: "🏖️", label: "Zanzibar Specialists", value: "Local" },
+  { icon: "🏖️", label: "AFRICA SPECIALISTS", value: "Local" },
 ];
 
 const WHY = [
