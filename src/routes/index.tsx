@@ -329,6 +329,7 @@ function LandingPage() {
 /* ---------- Sections ---------- */
 
 function Hero() {
+  const [videoOpen, setVideoOpen] = useState(false);
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
       {/* Parallax bg */}
