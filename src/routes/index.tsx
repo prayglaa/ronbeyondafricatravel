@@ -414,6 +414,11 @@ function Hero() {
           <ChevronDown className="h-5 w-5 animate-[scroll-hint_2s_ease-in-out_infinite]" />
         </span>
       </a>
+      <VideoModal
+        videos={SHOWREEL_VIDEOS}
+        open={videoOpen}
+        onClose={() => setVideoOpen(false)}
+      />
     </section>
   );
 }
