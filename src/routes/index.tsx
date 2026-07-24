@@ -370,7 +370,7 @@ function Hero() {
             </a>
             <button
               type="button"
-              onClick={() => toast("Video coming soon — reach out for our showreel.")}
+              onClick={() => setVideoOpen(true)}
               className="group inline-flex items-center gap-3 rounded-full glass px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
             >
               <span className="grid h-9 w-9 place-items-center rounded-full bg-white text-emerald-deep">
