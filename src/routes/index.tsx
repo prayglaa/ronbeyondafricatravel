@@ -1048,11 +1048,7 @@ function BookingForm() {
     }
 
     setSubmitting(true);
-    const { data: inserted, error } = await supabase
-      .from("bookings")
-      .insert(payload)
-      .select("id")
-      .single();
+    const { error } = await supabase.from("bookings").insert(payload);
     setSubmitting(false);
 
     if (error) {
@@ -1065,12 +1061,11 @@ function BookingForm() {
     form.reset();
 
     // Fire-and-forget WhatsApp notification to the owner.
-    if (inserted?.id) {
-      notifyBookingWhatsApp({ data: { bookingId: inserted.id } }).catch((err) =>
-        console.error("WhatsApp notification failed", err),
-      );
-    }
+    notifyBookingWhatsApp({ data: payload }).catch((err) =>
+      console.error("WhatsApp notification failed", err),
+    );
   };
+
 
   return (
     <form onSubmit={onSubmit} className="grid gap-4 sm:grid-cols-2">
