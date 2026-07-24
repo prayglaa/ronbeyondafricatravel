@@ -1238,8 +1238,8 @@ const CONTACT_CARDS = [
   {
     icon: Mail,
     title: "Email",
-    lines: ["ronbeyond@gmail.com", "24h response window"],
-    href: "mailto:ronbeyond@gmail.com",
+    lines: ["leringaronald@gmail.com", "24h response window"],
+    href: "mailto:leringaronald@gmail.com",
     cta: "Send email",
   },
 ];
@@ -1344,7 +1344,7 @@ function Footer() {
                 <MessageCircle className="h-4 w-4" />
               </a>
               <a
-                href="mailto:ronbeyond@gmail.com"
+                href="mailto:leringaronald@gmail.com"
                 aria-label="Email"
                 className="grid h-10 w-10 place-items-center rounded-full bg-white/5 text-white/70 transition hover:bg-gold hover:text-charcoal"
               >
