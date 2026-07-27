@@ -229,6 +229,10 @@ const GALLERY: (LightboxImage & { span: string })[] = [
   { src: userBird.url, alt: "Wide-eyed bird resting by the water", span: "" },
   { src: userTourists.url, alt: "Travelers on a safari game drive", span: "" },
   { src: userGuide2.url, alt: "Smiling safari guide on location", span: "" },
+  { src: postcard1.url, alt: "Ronbeyond Africa Travel postcard", span: "row-span-2" },
+  { src: postcard2.url, alt: "Safari moment captured in the wild", span: "" },
+  { src: postcard3.url, alt: "African wildlife postcard", span: "" },
+  { src: postcard4.url, alt: "Journey through Tanzania", span: "" },
 ];
 
 const TESTIMONIALS = [
