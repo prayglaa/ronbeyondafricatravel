@@ -59,9 +59,6 @@ import userBird from "@/assets/user-bird.jpeg.asset.json";
 import userOstriches from "@/assets/user-ostriches.jpeg.asset.json";
 import userLionsRoar from "@/assets/user-lions-roar.jpeg.asset.json";
 import postcard1 from "@/assets/IMG_1541.jpg.asset.json";
-import postcard2 from "@/assets/IMG_4256.jpg.asset.json";
-import postcard3 from "@/assets/IMG_4259.jpg.asset.json";
-import postcard4 from "@/assets/IMG_4260.jpg.asset.json";
 
 import { SiteNav } from "@/components/site-nav";
 import { Lightbox, type LightboxImage } from "@/components/lightbox";
@@ -230,9 +227,6 @@ const GALLERY: (LightboxImage & { span: string })[] = [
   { src: userTourists.url, alt: "Travelers on a safari game drive", span: "" },
   { src: userGuide2.url, alt: "Smiling safari guide on location", span: "" },
   { src: postcard1.url, alt: "Ronbeyond Africa Travel postcard", span: "row-span-2" },
-  { src: postcard2.url, alt: "Safari moment captured in the wild", span: "" },
-  { src: postcard3.url, alt: "African wildlife postcard", span: "" },
-  { src: postcard4.url, alt: "Journey through Tanzania", span: "" },
 ];
 
 const TESTIMONIALS = [
