@@ -1288,7 +1288,7 @@ function Footer() {
               ["Home", "#home"],
               ["Destinations", "#destinations"],
               ["About", "#about"],
-              ["Gallery", "#gallery"],
+              ["Testimonials", "#testimonials"],
               ["Contact", "#contact"],
             ]}
           />
