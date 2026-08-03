@@ -901,7 +901,7 @@ function AboutTanzania() {
         <div ref={imgRef} className="reveal relative">
           <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-luxe">
             <img
-              src={aboutTanzania}
+              src={aboutTanzania.url}
               alt="Maasai warriors performing traditional jumping dance in Tanzania"
               loading="lazy"
               className="h-full w-full object-cover"
