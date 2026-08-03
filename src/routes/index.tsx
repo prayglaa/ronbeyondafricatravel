@@ -46,7 +46,7 @@ import galGiraffe from "@/assets/gallery-giraffe.jpg";
 import galZebras from "@/assets/gallery-zebras.jpg";
 import galLodge from "@/assets/gallery-lodge.jpg";
 import galBalloon from "@/assets/gallery-balloon.jpg";
-import aboutTanzania from "@/assets/about-tanzania.jpg";
+import aboutTanzania from "@/assets/about-tanzania.png.asset.json";
 import logoAsset from "@/assets/ronbeyond-logo.jpeg.asset.json";
 import userZebra from "@/assets/user-zebra.jpeg.asset.json";
 import userHippo from "@/assets/user-hippo.jpeg.asset.json";
