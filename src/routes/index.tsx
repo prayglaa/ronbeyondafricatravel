@@ -46,7 +46,7 @@ import galGiraffe from "@/assets/gallery-giraffe.jpg";
 import galZebras from "@/assets/gallery-zebras.jpg";
 import galLodge from "@/assets/gallery-lodge.jpg";
 import galBalloon from "@/assets/gallery-balloon.jpg";
-import aboutTanzania from "@/assets/about-tanzania.jpg";
+import aboutTanzania from "@/assets/about-tanzania.png.asset.json";
 import logoAsset from "@/assets/ronbeyond-logo.jpeg.asset.json";
 import userZebra from "@/assets/user-zebra.jpeg.asset.json";
 import userHippo from "@/assets/user-hippo.jpeg.asset.json";
@@ -901,7 +901,7 @@ function AboutTanzania() {
         <div ref={imgRef} className="reveal relative">
           <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-luxe">
             <img
-              src={aboutTanzania}
+              src={aboutTanzania.url}
               alt="Maasai warriors performing traditional jumping dance in Tanzania"
               loading="lazy"
               className="h-full w-full object-cover"
