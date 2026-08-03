@@ -338,10 +338,10 @@ function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src={heroSafari}
-          alt="Tanzania safari at sunset with elephants and acacia trees"
+          alt="Great Wildebeest Migration crossing the Mara River in Serengeti National Park, Tanzania"
           className="h-full w-full scale-110 object-cover animate-[float_18s_ease-in-out_infinite]"
           width={1920}
-          height={1280}
+          height={1080}
           fetchPriority="high"
         />
         <div className="absolute inset-0 bg-hero-overlay" />
