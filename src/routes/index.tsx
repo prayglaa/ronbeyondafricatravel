@@ -338,7 +338,7 @@ function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src={heroSafari}
-          alt="Great Wildebeest Migration crossing the Mara River in Serengeti National Park, Tanzania"
+          alt="Serengeti National Park at golden sundown with acacia trees and wildlife on the savanna"
           className="h-full w-full scale-110 object-cover animate-[float_18s_ease-in-out_infinite]"
           width={1920}
           height={1080}
