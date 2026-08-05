@@ -63,6 +63,8 @@ import postcard1 from "@/assets/IMG_1541.jpg.asset.json";
 import { SiteNav } from "@/components/site-nav";
 import { Lightbox, type LightboxImage } from "@/components/lightbox";
 import { VideoModal } from "@/components/video-modal";
+import { DestinationModal } from "@/components/destination-modal";
+import { DESTINATION_DETAILS } from "@/data/destinations";
 import video2Asset from "@/assets/video2.mov.asset.json";
 
 const SHOWREEL_VIDEOS = [{ src: video2Asset.url }];
@@ -543,6 +545,29 @@ function WhyUs() {
 }
 
 function Destinations() {
+  const [active, setActive] = useState<number | null>(null);
+  const activeDest = active === null ? null : DESTINATIONS[active];
+  const detail = activeDest ? DESTINATION_DETAILS[activeDest.name] ?? null : null;
+
+  const handlePlan = ({
+    destination,
+    days,
+    itinerary,
+  }: { destination: string; days: number; itinerary: string[] }) => {
+    setActive(null);
+    window.dispatchEvent(
+      new CustomEvent("rb:prefill-booking", {
+        detail: {
+          destination,
+          message: `${days}-day ${detail?.name ?? destination} journey:\n${itinerary
+            .map((l, i) => `Day ${i + 1}: ${l}`)
+            .join("\n")}`,
+        },
+      }),
+    );
+    document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section id="destinations" className="relative bg-sand py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 sm:px-8">
@@ -553,7 +578,7 @@ function Destinations() {
               Where legends <span className="italic text-gradient-gold">roam</span>
             </>
           }
-          body="From the vast Serengeti to the turquoise reefs of Zanzibar, choose the corners of Tanzania that call you."
+          body="From the vast Serengeti to the turquoise reefs of Zanzibar, choose the corners of Tanzania that call you — tap any destination for a full guide."
         />
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {DESTINATIONS.map((d, i) => {
@@ -565,42 +590,55 @@ function Destinations() {
                 className="reveal group relative overflow-hidden rounded-3xl bg-card shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-luxe"
                 style={{ transitionDelay: `${(i % 3) * 90}ms` }}
               >
-                <div className="relative aspect-[4/5] overflow-hidden">
-                  <img
-                    src={d.img}
-                    alt={d.name}
-                    loading="lazy"
-                    width={1200}
-                    height={900}
-                    className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-                    <div className="flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-gold-soft">
-                      <MapPin className="h-3.5 w-3.5" />
-                      {d.location}
+                <button
+                  type="button"
+                  onClick={() => setActive(i)}
+                  aria-label={`Open the ${d.name} destination guide`}
+                  className="block w-full text-left"
+                >
+                  <div className="relative aspect-[4/5] overflow-hidden">
+                    <img
+                      src={d.img}
+                      alt={d.name}
+                      loading="lazy"
+                      width={1200}
+                      height={900}
+                      className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+                      <div className="flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-gold-soft">
+                        <MapPin className="h-3.5 w-3.5" />
+                        {d.location}
+                      </div>
+                      <h3 className="mt-2 font-display text-2xl font-semibold">
+                        {d.name}
+                      </h3>
+                      <p className="mt-2 text-sm text-white/80">{d.body}</p>
+                      <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gold-soft transition group-hover:gap-3">
+                        Explore this destination
+                        <ArrowRight className="h-4 w-4" />
+                      </span>
                     </div>
-                    <h3 className="mt-2 font-display text-2xl font-semibold">
-                      {d.name}
-                    </h3>
-                    <p className="mt-2 text-sm text-white/80">{d.body}</p>
-                    <a
-                      href="#booking"
-                      className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gold-soft transition group-hover:gap-3"
-                    >
-                      Explore
-                      <ArrowRight className="h-4 w-4" />
-                    </a>
                   </div>
-                </div>
+                </button>
               </article>
             );
           })}
         </div>
       </div>
+
+      <DestinationModal
+        open={active !== null}
+        image={activeDest?.img}
+        detail={detail}
+        onClose={() => setActive(null)}
+        onPlan={handlePlan}
+      />
     </section>
   );
 }
+
 
 function Packages() {
   return (
@@ -1077,6 +1115,16 @@ function BookingForm() {
     );
   };
 
+  const [prefill, setPrefill] = useState<{ destination: string; message: string } | null>(null);
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const d = (e as CustomEvent<{ destination: string; message: string }>).detail;
+      if (d) setPrefill(d);
+    };
+    window.addEventListener("rb:prefill-booking", handler);
+    return () => window.removeEventListener("rb:prefill-booking", handler);
+  }, []);
 
   return (
     <form onSubmit={onSubmit} className="grid gap-4 sm:grid-cols-2">
@@ -1085,8 +1133,10 @@ function BookingForm() {
       <Field label="Phone" name="phone" type="tel" placeholder="+1 555 000 0000" />
       <Field label="Travel date" name="date" type="date" />
       <SelectField
+        key={`dest-${prefill?.destination ?? ""}`}
         label="Destination"
         name="destination"
+        defaultValue={prefill?.destination}
         options={["Serengeti", "Ngorongoro", "Kilimanjaro", "Zanzibar", "Tarangire", "Lake Manyara", "Not sure yet"]}
       />
       <SelectField
@@ -1102,12 +1152,15 @@ function BookingForm() {
           Tell us about your dream trip
         </label>
         <textarea
+          key={`msg-${prefill?.message?.length ?? 0}`}
           name="message"
-          rows={4}
+          rows={prefill ? 8 : 4}
+          defaultValue={prefill?.message}
           placeholder="Interests, celebrations, must-see wildlife..."
           className="w-full resize-none rounded-2xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-emerald focus:ring-2 focus:ring-emerald/20"
         />
       </div>
+
       <button
         type="submit"
         disabled={submitting}
@@ -1143,7 +1196,7 @@ function Field({
   );
 }
 
-function SelectField({ label, name, options }: { label: string; name: string; options: string[] }) {
+function SelectField({ label, name, options, defaultValue = "" }: { label: string; name: string; options: string[]; defaultValue?: string }) {
   return (
     <div>
       <label htmlFor={name} className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
@@ -1153,7 +1206,7 @@ function SelectField({ label, name, options }: { label: string; name: string; op
         id={name}
         name={name}
         required
-        defaultValue=""
+        defaultValue={defaultValue}
         className="w-full appearance-none rounded-2xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-emerald focus:ring-2 focus:ring-emerald/20"
       >
         <option value="" disabled>Select…</option>
