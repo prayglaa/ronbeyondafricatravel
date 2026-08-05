@@ -855,7 +855,7 @@ function Packages() {
                       : "bg-emerald text-white hover:bg-emerald-deep",
                   )}
                 >
-                  Book Now
+                  Request this itinerary
                   <ArrowRight className="h-4 w-4" />
                 </a>
               </div>
