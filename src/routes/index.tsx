@@ -863,6 +863,46 @@ function Packages() {
             );
           })}
         </div>
+
+        <div className="mt-24">
+          <SectionHeading
+            eyebrow="Day Trips & Excursions"
+            title={
+              <>
+                Add a <span className="italic text-gradient-sunset">day</span> to your journey
+              </>
+            }
+            body="Short trips across northern Tanzania and Zanzibar — perfect before a safari, after a climb, or on a beach week."
+          />
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {EXCURSIONS.map((x, i) => {
+              const Ref = useReveal<HTMLDivElement>();
+              return (
+                <div
+                  key={x.name}
+                  ref={Ref}
+                  className="reveal flex flex-col rounded-2xl border border-border bg-card p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-luxe"
+                  style={{ transitionDelay: `${(i % 3) * 80}ms` }}
+                >
+                  <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gold">
+                    {x.duration}
+                  </div>
+                  <h4 className="mt-2 font-display text-lg font-semibold text-foreground">
+                    {x.name}
+                  </h4>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{x.body}</p>
+                  <a
+                    href="#booking"
+                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-emerald hover:gap-3 transition-all"
+                  >
+                    Enquire
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </section>
   );
