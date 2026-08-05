@@ -757,9 +757,9 @@ function Packages() {
               Choose your <span className="italic text-gradient-sunset">adventure</span>
             </>
           }
-          body="Three signature journeys — or let us design one that's uniquely yours."
+          body="Realistic, well-paced journeys across Tanzania's national parks, Kilimanjaro and Zanzibar — every one tailored to your dates, pace and budget."
         />
-        <div className="mt-16 grid gap-6 lg:grid-cols-3 lg:items-stretch">
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:items-stretch">
           {PACKAGES.map((p, i) => {
             const Ref = useReveal<HTMLDivElement>();
             const featured = p.featured;
