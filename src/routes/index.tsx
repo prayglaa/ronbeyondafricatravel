@@ -158,51 +158,157 @@ const DESTINATIONS = [
 
 const PACKAGES = [
   {
-    name: "Classic Safari",
-    tagline: "The essential Northern Circuit",
+    name: "Northern Circuit Classic",
+    tagline: "Tarangire · Ngorongoro · Serengeti",
     duration: "6 Days · 5 Nights",
-    price: 2890,
     destinations: ["Tarangire", "Ngorongoro", "Serengeti"],
     features: [
-      "Comfort tented camps",
-      "Full-board meals",
-      "4×4 pop-top vehicle",
-      "Airport transfers",
-      "Park fees included",
+      "Baobab valley elephant herds in Tarangire",
+      "Full-day Ngorongoro Crater floor safari",
+      "Two nights in the Central Serengeti",
+      "Comfort tented camps, full-board",
+      "Private 4×4 pop-top Land Cruiser & guide",
+      "All park fees and airport transfers",
     ],
     featured: false,
   },
   {
-    name: "Luxury Safari",
-    tagline: "Our signature journey",
-    duration: "9 Days · 8 Nights",
-    price: 5490,
-    destinations: ["Tarangire", "Manyara", "Ngorongoro", "Serengeti"],
+    name: "Great Migration Safari",
+    tagline: "Following the herds, season by season",
+    duration: "8 Days · 7 Nights",
+    destinations: ["Serengeti", "Ndutu", "Ngorongoro"],
     features: [
-      "Boutique luxury lodges",
-      "Private guide & vehicle",
-      "Sunset bush dinners",
-      "Hot-air balloon safari",
-      "Domestic flight leg",
-      "Sundowners each evening",
+      "Mara River crossings (Aug–Oct) or Ndutu calving (Dec–Mar)",
+      "Mobile camp that moves with the herds",
+      "Sunrise hot-air balloon over the plains",
+      "Moru Kopjes rhino tracking & Maasai rock art",
+      "Bush breakfast and kopje sundowners",
+      "Flight leg Kogatende/Seronera – Arusha",
     ],
     featured: true,
   },
   {
-    name: "Ultimate Tanzania",
-    tagline: "Safari, summit & sea",
-    duration: "14 Days · 13 Nights",
-    price: 9850,
-    destinations: ["Serengeti", "Kilimanjaro", "Zanzibar"],
+    name: "Safari & Zanzibar Beach",
+    tagline: "Bush and Indian Ocean in one trip",
+    duration: "10 Days · 9 Nights",
+    destinations: ["Tarangire", "Ngorongoro", "Serengeti", "Zanzibar"],
     features: [
-      "Five-star tented suites",
-      "Kilimanjaro trek support",
-      "Private beach villa in Zanzibar",
-      "All internal flights",
-      "Private chef experience",
-      "Dedicated concierge",
+      "Four safari nights on the Northern Circuit",
+      "Direct safari-to-sea flight to Zanzibar",
+      "Four nights beach resort, Nungwi or Matemwe",
+      "Stone Town heritage walk and spice farm tour",
+      "Mnemba Atoll snorkelling and sandbank picnic",
+      "Sunset dhow cruise",
     ],
     featured: false,
+  },
+  {
+    name: "Kilimanjaro Trek",
+    tagline: "Lemosho or Machame route to Uhuru Peak",
+    duration: "7–9 Days on the mountain",
+    destinations: ["Kilimanjaro", "Moshi"],
+    features: [
+      "KPAP-standard guides, cooks and porters",
+      "Extra acclimatisation day for higher summit success",
+      "Daily pulse-oximetry health checks",
+      "Four-season tents, mess and private toilet tent",
+      "Pre and post-climb hotel nights in Moshi",
+      "Summit certificate ceremony",
+    ],
+    featured: false,
+  },
+  {
+    name: "Southern Wilderness",
+    tagline: "Nyerere (Selous) & Ruaha — no crowds",
+    duration: "7 Days · 6 Nights",
+    destinations: ["Nyerere", "Ruaha", "Dar es Salaam"],
+    features: [
+      "Boat safari on the Rufiji River",
+      "Walking safaris with an armed ranger",
+      "Ruaha's big lion prides and wild dogs",
+      "Light-aircraft flights from Dar es Salaam",
+      "Riverside tented camps, full-board",
+      "Fly-camping night under the stars",
+    ],
+    featured: false,
+  },
+  {
+    name: "Family & Culture Journey",
+    tagline: "Short drives, real Tanzanian life",
+    duration: "5 Days · 4 Nights",
+    destinations: ["Arusha", "Lake Manyara", "Ngorongoro"],
+    features: [
+      "Family rooms and flexible game-drive timings",
+      "Mto wa Mbu village, market and banana farms",
+      "Manyara treetop canopy walkway",
+      "Maasai boma visit and beadwork workshop",
+      "Chagga coffee roasting near Arusha",
+      "Ngorongoro Crater day safari finale",
+    ],
+    featured: false,
+  },
+];
+
+const EXCURSIONS = [
+  {
+    name: "Ngorongoro Crater Day Trip",
+    duration: "1 day from Arusha or Karatu",
+    body: "Dawn descent into the caldera for lion, elephant, flamingo and black rhino, with a picnic lunch on the crater floor.",
+  },
+  {
+    name: "Tarangire Day Safari",
+    duration: "1 day from Arusha",
+    body: "Baobab groves and the river circuit where the biggest elephant herds in the north gather in the dry season.",
+  },
+  {
+    name: "Lake Manyara & Mto wa Mbu",
+    duration: "1 day from Arusha",
+    body: "Groundwater forest, hippo pools and tree-climbing lions, plus a cultural walk through a village of 120 tribes.",
+  },
+  {
+    name: "Arusha National Park & Momella",
+    duration: "Half or full day",
+    body: "Walking safari among giraffe and buffalo, canoeing the Momella Lakes beneath Mount Meru.",
+  },
+  {
+    name: "Materuni Falls & Chagga Coffee",
+    duration: "1 day from Moshi",
+    body: "Waterfall hike on the Kilimanjaro foothills and a hands-on Chagga coffee roasting experience.",
+  },
+  {
+    name: "Kikuletwa Hot Springs",
+    duration: "Half day from Moshi",
+    body: "Swim in turquoise spring-fed pools shaded by fig trees — the classic post-Kilimanjaro recovery day.",
+  },
+  {
+    name: "Stone Town & Spice Farm",
+    duration: "1 day in Zanzibar",
+    body: "Old Fort, House of Wonders, the slave market memorial and a working spice farm tasting tour.",
+  },
+  {
+    name: "Mnemba Atoll & Sandbank",
+    duration: "1 day in Zanzibar",
+    body: "Dhow out to the reef for snorkelling with turtles, then a seafood barbecue on a private sandbank.",
+  },
+  {
+    name: "Jozani Forest & Kizimkazi Dolphins",
+    duration: "1 day in Zanzibar",
+    body: "Endemic red colobus monkeys and mangrove boardwalks, followed by a responsible dolphin encounter.",
+  },
+  {
+    name: "Prison Island & Nakupenda",
+    duration: "Half day in Zanzibar",
+    body: "Giant Aldabra tortoises, coral snorkelling and the shifting white sandbar off Stone Town.",
+  },
+  {
+    name: "Sunset Dhow Cruise",
+    duration: "Evening in Zanzibar",
+    body: "Traditional sailing dhow, Swahili acoustic music and canapés as the sun drops into the ocean.",
+  },
+  {
+    name: "Hot-Air Balloon Safari",
+    duration: "Sunrise in the Serengeti",
+    body: "One hour drifting over the plains at first light, landing to a champagne bush breakfast.",
   },
 ];
 
@@ -651,9 +757,9 @@ function Packages() {
               Choose your <span className="italic text-gradient-sunset">adventure</span>
             </>
           }
-          body="Three signature journeys — or let us design one that's uniquely yours."
+          body="Realistic, well-paced journeys across Tanzania's national parks, Kilimanjaro and Zanzibar — every one tailored to your dates, pace and budget."
         />
-        <div className="mt-16 grid gap-6 lg:grid-cols-3 lg:items-stretch">
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:items-stretch">
           {PACKAGES.map((p, i) => {
             const Ref = useReveal<HTMLDivElement>();
             const featured = p.featured;
@@ -664,7 +770,7 @@ function Packages() {
                 className={cn(
                   "reveal relative flex flex-col overflow-hidden rounded-3xl border p-8 transition-all duration-500",
                   featured
-                    ? "border-transparent bg-gradient-safari text-white shadow-emerald lg:-my-4 lg:scale-[1.03]"
+                    ? "border-transparent bg-gradient-safari text-white shadow-emerald"
                     : "border-border bg-card shadow-soft hover:-translate-y-1 hover:shadow-luxe",
                 )}
                 style={{ transitionDelay: `${i * 100}ms` }}
@@ -690,13 +796,12 @@ function Packages() {
                 >
                   {p.tagline}
                 </p>
-                <div className="mt-6 flex items-baseline gap-1">
-                  <span className={cn("font-display text-5xl font-semibold", featured ? "text-gold-soft" : "text-emerald")}>
-                    ${p.price.toLocaleString()}
-                  </span>
-                  <span className={cn("text-sm", featured ? "text-white/60" : "text-muted-foreground")}>/ person</span>
-                </div>
-                <div className={cn("mt-2 text-xs uppercase tracking-[0.2em]", featured ? "text-gold-soft" : "text-gold")}>
+                <div
+                  className={cn(
+                    "mt-6 inline-flex self-start rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em]",
+                    featured ? "bg-white/10 text-gold-soft" : "bg-gold/10 text-gold",
+                  )}
+                >
                   {p.duration}
                 </div>
 
@@ -750,12 +855,52 @@ function Packages() {
                       : "bg-emerald text-white hover:bg-emerald-deep",
                   )}
                 >
-                  Book Now
+                  Request this itinerary
                   <ArrowRight className="h-4 w-4" />
                 </a>
               </div>
             );
           })}
+        </div>
+
+        <div className="mt-24">
+          <SectionHeading
+            eyebrow="Day Trips & Excursions"
+            title={
+              <>
+                Add a <span className="italic text-gradient-sunset">day</span> to your journey
+              </>
+            }
+            body="Short trips across northern Tanzania and Zanzibar — perfect before a safari, after a climb, or on a beach week."
+          />
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {EXCURSIONS.map((x, i) => {
+              const Ref = useReveal<HTMLDivElement>();
+              return (
+                <div
+                  key={x.name}
+                  ref={Ref}
+                  className="reveal flex flex-col rounded-2xl border border-border bg-card p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-luxe"
+                  style={{ transitionDelay: `${(i % 3) * 80}ms` }}
+                >
+                  <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gold">
+                    {x.duration}
+                  </div>
+                  <h4 className="mt-2 font-display text-lg font-semibold text-foreground">
+                    {x.name}
+                  </h4>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{x.body}</p>
+                  <a
+                    href="#booking"
+                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-emerald hover:gap-3 transition-all"
+                  >
+                    Enquire
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
@@ -1142,7 +1287,16 @@ function BookingForm() {
       <SelectField
         label="Package"
         name="package"
-        options={["Classic Safari", "Luxury Safari", "Ultimate Tanzania", "Custom"]}
+        options={[
+          "Northern Circuit Classic",
+          "Great Migration Safari",
+          "Safari & Zanzibar Beach",
+          "Kilimanjaro Trek",
+          "Southern Wilderness",
+          "Family & Culture Journey",
+          "Day trip / Excursion",
+          "Custom itinerary",
+        ]}
       />
       <div className="sm:col-span-2">
         <Field label="Number of travelers" name="travelers" type="number" placeholder="2" min={1} />
