@@ -1287,7 +1287,16 @@ function BookingForm() {
       <SelectField
         label="Package"
         name="package"
-        options={["Classic Safari", "Luxury Safari", "Ultimate Tanzania", "Custom"]}
+        options={[
+          "Northern Circuit Classic",
+          "Great Migration Safari",
+          "Safari & Zanzibar Beach",
+          "Kilimanjaro Trek",
+          "Southern Wilderness",
+          "Family & Culture Journey",
+          "Day trip / Excursion",
+          "Custom itinerary",
+        ]}
       />
       <div className="sm:col-span-2">
         <Field label="Number of travelers" name="travelers" type="number" placeholder="2" min={1} />
