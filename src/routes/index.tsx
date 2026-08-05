@@ -770,7 +770,7 @@ function Packages() {
                 className={cn(
                   "reveal relative flex flex-col overflow-hidden rounded-3xl border p-8 transition-all duration-500",
                   featured
-                    ? "border-transparent bg-gradient-safari text-white shadow-emerald lg:-my-4 lg:scale-[1.03]"
+                    ? "border-transparent bg-gradient-safari text-white shadow-emerald"
                     : "border-border bg-card shadow-soft hover:-translate-y-1 hover:shadow-luxe",
                 )}
                 style={{ transitionDelay: `${i * 100}ms` }}
