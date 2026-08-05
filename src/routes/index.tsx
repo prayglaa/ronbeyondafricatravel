@@ -796,13 +796,12 @@ function Packages() {
                 >
                   {p.tagline}
                 </p>
-                <div className="mt-6 flex items-baseline gap-1">
-                  <span className={cn("font-display text-5xl font-semibold", featured ? "text-gold-soft" : "text-emerald")}>
-                    ${p.price.toLocaleString()}
-                  </span>
-                  <span className={cn("text-sm", featured ? "text-white/60" : "text-muted-foreground")}>/ person</span>
-                </div>
-                <div className={cn("mt-2 text-xs uppercase tracking-[0.2em]", featured ? "text-gold-soft" : "text-gold")}>
+                <div
+                  className={cn(
+                    "mt-6 inline-flex self-start rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em]",
+                    featured ? "bg-white/10 text-gold-soft" : "bg-gold/10 text-gold",
+                  )}
+                >
                   {p.duration}
                 </div>
 
