@@ -366,7 +366,43 @@ const TESTIMONIALS = [
     initials: "NF",
     color: "bg-gradient-gold",
   },
+  {
+    name: "Agent Tom Group",
+    country: "Houston, Texas, USA",
+    text: "We brought a group of 14 travellers from the USA and Ronbeyond Africa Travel handled every moving part — airport pickups, four Land Cruisers, park permits and a private bush dinner in the Serengeti. Zero stress, perfect timing, and our clients are already asking about next year's trip.",
+    initials: "AT",
+    color: "bg-gradient-safari",
+  },
+  {
+    name: "Lukas & Marie Hoffmann",
+    country: "Munich, Germany",
+    text: "Ngorongoro at sunrise, elephants under the baobabs in Tarangire, then Zanzibar to slow down. The guide's knowledge of birds and bush medicine turned each drive into a lesson. Wunderbar organised from first email to last transfer.",
+    initials: "LH",
+    color: "bg-gradient-sunset",
+  },
+  {
+    name: "Aisha Mohammed",
+    country: "Dubai, United Arab Emirates",
+    text: "I travelled solo and never once felt unsure. Halal meals arranged without me asking, a female guide for the Stone Town walk, and constant WhatsApp support. Tanzania felt like home in six days.",
+    initials: "AM",
+    color: "bg-gradient-gold",
+  },
+  {
+    name: "Daniel Okoro",
+    country: "Lagos, Nigeria",
+    text: "Kilimanjaro via Lemosho with Ronbeyond — the porters and guides were world class, the acclimatisation day made the difference, and all seven of us stood on Uhuru Peak at sunrise. Life changing.",
+    initials: "DO",
+    color: "bg-gradient-safari",
+  },
+  {
+    name: "Chloe & Sam Turner",
+    country: "Melbourne, Australia",
+    text: "Our honeymoon: mobile camp with the migration, a hot-air balloon at dawn and a private dhow sunset in Matemwe. They quietly upgraded our tent and left flowers on the bed. Faultless.",
+    initials: "CT",
+    color: "bg-gradient-sunset",
+  },
 ];
+
 
 const COUNTERS = [
   { value: 120, suffix: "+", label: "National Attractions" },
